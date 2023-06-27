@@ -24,4 +24,5 @@ jobs:
             name: "Build images"
             run: |
                 docker --version
+                export DOCKER_BUILDKIT="1"
                 docker build .
