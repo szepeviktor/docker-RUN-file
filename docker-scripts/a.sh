@@ -8,6 +8,10 @@ echo '🌲🦋🐌🐛🐜🐝'
 PATH="/opt/docker-scripts:${PATH}"
 cd /tmp/
 
+DEBIAN_FRONTEND="noninteractive"
+apt-get update
+apt-get install -y dialog lsb-release ca-certificates wget jq
+
 install-php-phive
 phive install n98-magerun2 --trust-gpg-keys E92FF862BCBFE89A
 find .
@@ -15,4 +19,6 @@ find .
 echo 'OK.'
 
 # Cleanup
-rm -rf /tmp/*
+rm -r /tmp/*
+apt-get clean
+rm -r /var/lib/apt/lists/*
