@@ -8,6 +8,7 @@ echo '🌲🦋🐌🐛🐜🐝'
 PATH="/opt/docker-scripts:${PATH}"
 cd /tmp/
 
+TERM="xterm"
 DEBIAN_FRONTEND="noninteractive"
 apt-get update
 apt-get install -y dialog lsb-release ca-certificates wget gpg jq
