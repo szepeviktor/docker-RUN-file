@@ -12,6 +12,13 @@ DEBIAN_FRONTEND="noninteractive"
 apt-get update
 apt-get install -y dialog lsb-release ca-certificates wget gpg jq
 
+echo 'deb https://packages.sury.org/php/ bookworm main' >/etc/apt/sources.list.d/sury-php.list
+wget -qO/etc/apt/trusted.gpg.d/sury-php.gpg 'https://packages.sury.org/php/apt.gpg'
+printf 'Package: openssl libssl-dev libssl-doc libssl1.1\nPin: origin "packages.sury.org"\nPin-Priority: -1\n' \
+    >/etc/apt/preferences.d/sury-openssl.pref
+apt-get update
+apt-get install -y php8.2-cli php8.2-curl php8.2-mbstring php8.2-xml
+
 install-php-phive
 phive install n98-magerun2 --trust-gpg-keys E92FF862BCBFE89A
 find .
