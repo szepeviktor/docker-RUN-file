@@ -5,7 +5,7 @@ set -e
 echo 'I would like to cut some trees from your jungle.'
 echo '🌲🦋🐌🐛🐜🐝'
 
-set PATH="/opt/docker-scripts:${PATH}"
+PATH="/opt/docker-scripts:${PATH}"
 cd /tmp/
 
 install-php-phive
