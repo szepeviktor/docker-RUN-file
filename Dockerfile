@@ -1,5 +1,3 @@
 FROM debian:12.0-slim
 
-RUN --mount=type=bind,source=docker-scripts,target=/opt/docker-scripts
-
-RUN /opt/docker-scripts/a.sh
+RUN --mount=type=bind,source=docker-scripts,target=/opt/docker-scripts /opt/docker-scripts/a.sh
