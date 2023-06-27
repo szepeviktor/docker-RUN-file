@@ -8,8 +8,9 @@ echo '🌲🦋🐌🐛🐜🐝'
 PATH="/opt/docker-scripts:${PATH}"
 cd /tmp/
 
-TERM="xterm"
-DEBIAN_FRONTEND="noninteractive"
+export LC_ALL="C"
+export TERM="xterm"
+export DEBIAN_FRONTEND="noninteractive"
 apt-get update
 apt-get install -y dialog lsb-release ca-certificates wget gpg jq
 
@@ -23,6 +24,7 @@ apt-get install -y php8.2-cli php8.2-curl php8.2-mbstring php8.2-xml
 install-php-phive
 phive install n98-magerun2 --trust-gpg-keys E92FF862BCBFE89A
 find .
+./tools/n98-magerun2 --version
 
 # Cleanup
 rm -r /tmp/*
