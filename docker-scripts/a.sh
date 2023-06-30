@@ -12,7 +12,7 @@ cd /tmp/
 #export TERM="xterm"
 #export DEBIAN_FRONTEND="noninteractive"
 apt-get update
-apt-get install -y dialog lsb-release ca-certificates wget gpg jq
+apt-get install -y lsb-release ca-certificates wget gpg jq
 
 echo 'deb https://packages.sury.org/php/ bookworm main' >/etc/apt/sources.list.d/sury-php.list
 wget -qO/etc/apt/trusted.gpg.d/sury-php.gpg 'https://packages.sury.org/php/apt.gpg'
