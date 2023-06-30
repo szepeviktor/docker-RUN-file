@@ -22,7 +22,7 @@ apt-get update
 apt-get install -y php8.2-cli php8.2-curl php8.2-mbstring php8.2-xml
 
 install-php-phive
-phive install n98-magerun2 --no-progress --trust-gpg-keys E92FF862BCBFE89A
+phive --no-progress install n98-magerun2 --trust-gpg-keys E92FF862BCBFE89A
 find .
 ./tools/n98-magerun2 --version
 
