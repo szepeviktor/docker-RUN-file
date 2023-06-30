@@ -28,7 +28,10 @@ find .
 
 # Cleanup
 rm -r /tmp/*
+echo pre-clean;du -m /var/lib/{apt,dpkg}/
 apt-get clean
+echo post-clean;du -m /var/lib/{apt,dpkg}/
 rm -r /var/lib/apt/lists/*
+echo post-rm;du -m /var/lib/{apt,dpkg}/
 
 echo 'OK.'
