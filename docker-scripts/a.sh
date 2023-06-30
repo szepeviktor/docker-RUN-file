@@ -8,9 +8,9 @@ echo '🌲🦋🐌🐛🐜🐝'
 PATH="/opt/docker-scripts:${PATH}"
 cd /tmp/
 
-export LC_ALL="C"
-export TERM="xterm"
-export DEBIAN_FRONTEND="noninteractive"
+#export LC_ALL="C"
+#export TERM="xterm"
+#export DEBIAN_FRONTEND="noninteractive"
 apt-get update
 apt-get install -y dialog lsb-release ca-certificates wget gpg jq
 
@@ -28,10 +28,8 @@ find .
 
 # Cleanup
 rm -r /tmp/*
-echo pre-clean;du -m /var/*/apt/ /var/lib/dpkg/
 apt-get clean
-echo post-clean;du -m /var/*/apt/ /var/lib/dpkg/
 rm -r /var/lib/apt/lists/*
-echo post-rm;du -m /var/*/apt/ /var/lib/dpkg/
+#du -m /var/*/apt/ /var/lib/dpkg/
 
 echo 'OK.'
