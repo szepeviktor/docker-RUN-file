@@ -1,4 +1,5 @@
-FROM debian:12.0-slim
+# bookworm
+FROM debian:12.9-slim
 
 ARG LC_ALL=C
 ARG TERM=linux
